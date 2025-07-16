@@ -1,0 +1,10 @@
+[Unit]
+Description=Start USB/IP Daemon
+After=network.target
+
+[Service]
+ExecStart=/usr/sbin/usbipd -D
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
